@@ -1,0 +1,23 @@
+// Modern JavaScript features
+const user = data?.profile?.name ?? 'Anonymous';
+
+// Container queries CSS
+const styles = `
+  .container {
+    container-type: inline;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  @container (min-width: 400px) {
+    .card { padding: 2rem; }
+  }
+`;
+
+// Web Components
+class MyElement extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = '<p>Hello Baseline!</p>';
+  }
+}
+customElements.define('my-element', MyElement

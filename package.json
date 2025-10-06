@@ -1,0 +1,198 @@
+{
+  "name": "baseline-web-features-pro",
+  "displayName": "🚀 Baseline Web Features Pro",
+  "description": "Professional web platform compatibility analysis with real-time Baseline integration - Built for Baseline Tooling Hackathon",
+  "version": "2.0.0",
+  "publisher": "Shahbaz_siddiqui",
+  "repository": "https://github.com/shahbazSQ/baseline-web-features-pro",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other",
+    "Linters",
+    "Snippets",
+    "Debuggers"
+  ],
+  "keywords": [
+    "baseline",
+    "web-features",
+    "compatibility",
+    "browser-support",
+    "web-standards",
+    "hackathon"
+  ],
+  "icon": "icon.png",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:html",
+    "onLanguage:css",
+    "onLanguage:json",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "baseline.analyzeFile",
+        "title": "🔍 Analyze Current File",
+        "category": "Baseline Pro"
+      },
+      {
+        "command": "baseline.analyzeProject",
+        "title": "📊 Analyze Entire Project",
+        "category": "Baseline Pro"
+      },
+      {
+        "command": "baseline.showDashboard",
+        "title": "📈 Show Baseline Dashboard",
+        "category": "Baseline Pro"
+      },
+      {
+        "command": "baseline.generateReport",
+        "title": "📋 Generate Compatibility Report",
+        "category": "Baseline Pro"
+      },
+      {
+        "command": "baseline.modernizeCode",
+        "title": "✨ Modernize Code",
+        "category": "Baseline Pro"
+      },
+      {
+        "command": "baseline.checkSecurity",
+        "title": "🛡️ Security Analysis",
+        "category": "Baseline Pro"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "baselinePro",
+          "title": "Baseline Pro",
+          "icon": "$(globe)"
+        }
+      ]
+    },
+    "views": {
+      "baselinePro": [
+        {
+          "id": "featureAnalysis",
+          "name": "🔍 Feature Analysis",
+          "when": "true"
+        },
+        {
+          "id": "baselineScore",
+          "name": "📊 Baseline Score",
+          "when": "true"
+        },
+        {
+          "id": "recommendations",
+          "name": "💡 Smart Recommendations",
+          "when": "true"
+        },
+        {
+          "id": "browserSupport",
+          "name": "🌐 Browser Support",
+          "when": "true"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "baseline.analyzeFile",
+        "key": "ctrl+shift+b",
+        "mac": "cmd+shift+b",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "baseline.showDashboard",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d"
+      }
+    ],
+    "configuration": {
+      "title": "Baseline Pro Configuration",
+      "properties": {
+        "baselinePro.autoAnalysis": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically analyze files on save and open"
+        },
+        "baselinePro.targetBrowsers": {
+          "type": "array",
+          "default": [
+            "chrome",
+            "firefox",
+            "safari",
+            "edge"
+          ],
+          "description": "Target browsers for compatibility analysis"
+        },
+        "baselinePro.baselineThreshold": {
+          "type": "string",
+          "default": "newly",
+          "enum": [
+            "widely",
+            "newly",
+            "limited"
+          ],
+          "description": "Minimum Baseline status to consider safe"
+        },
+        "baselinePro.showInlineHints": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show compatibility hints inline in code"
+        },
+        "baselinePro.enableSecurityChecks": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable security vulnerability analysis"
+        },
+        "baselinePro.marketShare": {
+          "type": "number",
+          "default": 95,
+          "minimum": 50,
+          "maximum": 100,
+          "description": "Minimum browser market share threshold (%)"
+        }
+      }
+    },
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorTextFocus",
+          "command": "baseline.analyzeFile",
+          "group": "baseline"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "baseline.analyzeProject",
+          "group": "baseline"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "web-features": "^2.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.4"
+  },
+  "license": "MIT"
+}

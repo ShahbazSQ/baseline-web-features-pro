@@ -1,4 +1,5 @@
 # 🚀 Baseline Web Features Pro
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 Never wonder "Is it safe to use?" again! Real-time web platform compatibility analysis with official Baseline integration.
@@ -6,7 +7,6 @@ Never wonder "Is it safe to use?" again! Real-time web platform compatibility an
 ![Baseline Score](https://img.shields.io/badge/Baseline%20Score-90%25-brightgreen)
 ![Features](https://img.shields.io/badge/Features-45%2B-blue)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## ✨ Features
 
 - 🔍 **45+ Web Features Detection** - JavaScript, CSS, Web APIs

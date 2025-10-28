@@ -28,7 +28,7 @@ Developers waste **2-3 hours weekly** checking if modern web features are produc
 
 ## 💡 Our Solution
 
-**Baseline Pro integrates official Baseline data directly into VSCode**, giving instant answers while you code and chill.
+**Baseline Pro integrates official Baseline data directly into VSCode**, giving instant answers while you code.
 
 ## 🚀 Quick Start
 
